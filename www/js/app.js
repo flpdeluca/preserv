@@ -25,8 +25,8 @@ myapp.config(function($stateProvider, $urlRouterProvider)
   .state('inicio',
     {
       url:'/inicio',
-      templateUrl: 'templates/template_inicio.html',
-      controller: "inicioCtrl"
+      templateUrl: 'templates/temp_login.html',
+      controller: "loginCtrl"
     }
   )
 

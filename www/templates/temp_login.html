@@ -1,0 +1,34 @@
+  <ion-view view-title="P R E S E R V">
+    
+    <ion-content>
+      <!-- The content of the page -->
+
+		<div class="item item-image padding">
+		    <img src="https://cdn4.iconfinder.com/data/icons/basic-office-icons/512/gears.png" style ="width:50%">
+		 </div>
+
+      <div class="list list-inset">
+		  <label class="item item-input">
+
+		    <input type="text" placeholder="Usuário" ng-model="login.user">
+
+		  </label>
+		  <label class="item item-input">
+
+		    <input type="text" placeholder="{{x}}" ng-model="login.senha">
+
+		  </label>
+		  <button  class="button button-positive button-block" ng-click="get_login(login)"> Entrar </button>
+		  
+		  
+			  <a href="#/cadastro.html" class="button-block" > 
+			  	Ainda não tem conta? cadastre-se já!
+			  </a>
+		  
+		
+		</div>
+    
+    </ion-content>
+  
+  </ion-view>
+
