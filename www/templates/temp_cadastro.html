@@ -1,0 +1,70 @@
+<style type="text/css">
+	.toggle input + .track{background-color: #ef473a};
+
+  	.li	{font-size: 20px}
+  	
+	
+</style>
+
+<ion-view view-title="Cadastro">
+    
+    <ion-content>
+	    
+	    <div class="list">
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Nome</span>
+		    <input type="text" placeholder="Nome" ng-model="cadastro.nome">
+		  </label>
+
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Sobrenome</span>
+		    <input type="text" placeholder="Sobrenome" ng-model="cadastro.sobrenome">
+		  </label>
+
+
+		  <li class="item item-toggle" ng-class="{'icon ion-man': liked, 'icon ion-woman': !liked}" ng-click="liked=!liked" >
+		     Sexo
+		     
+		     <!-- <i id="like" ng-class="{'icon ion-ios7-heart': some_model.liked, 'icon ion-ios7-heart-outline': !some_model.liked}" ng-click="some_model.liked=!some_model.liked"></i>-->
+
+		     <label class="toggle toggle-positive" >
+			       <input type="checkbox"> 
+			       <div class="track">
+			         <div class="handle">
+			         </div>
+			       </div>
+			 </label>
+	  	</li>
+
+	  	<label class="item item-input item-stacked-label">
+			<span class="input-label">Nascimento</span>
+			<input type="date" placeholder="nascimento">
+		</label>
+
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">e-mail</span>
+			<input type="email" placeholder="email">
+		</label>
+
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Senha</span>
+			<input type="password" placeholder="senha">
+		</label>
+
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Confirme a senha</span>
+			<input type="password" placeholder="Confirme a senha">
+		</label>
+
+		<button class="button button-block button-positive" ng-click="cadastroOk()">
+		  OK
+		</button>
+
+
+		</div>
+
+		
+
+    </ion-content>
+
+  </ion-view>

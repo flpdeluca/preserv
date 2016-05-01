@@ -1,4 +1,4 @@
-  <ion-view view-title="P R E S E R V">
+  <ion-view view-title="Preserv">
     
     <ion-content>
       <!-- The content of the page -->
@@ -15,15 +15,13 @@
 		  </label>
 		  <label class="item item-input">
 
-		    <input type="text" placeholder="{{x}}" ng-model="login.senha">
+		    <input type="password" placeholder="{{x}}" ng-model="login.senha">
 
 		  </label>
 		  <button  class="button button-positive button-block" ng-click="get_login(login)"> Entrar </button>
 		  
-		  
-			  <a href="#/cadastro.html" class="button-block" > 
-			  	Ainda não tem conta? cadastre-se já!
-			  </a>
+		  <button  class="button button-clear button-full button-royal" ng-click="cadastro()"> Ainda não tem conta? cadastre-se já! </button>
+			  
 		  
 		
 		</div>

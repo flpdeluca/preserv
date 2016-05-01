@@ -1,4 +1,8 @@
-var myapp = angular.module('starter', ['ionic','starter.controllers'])
+var myapp = angular.module('starter', [
+  'ionic',
+  'starter.controllers',
+  'starter.services',
+  ])
 
 myapp.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -26,7 +30,15 @@ myapp.config(function($stateProvider, $urlRouterProvider)
     {
       url:'/inicio',
       templateUrl: 'templates/temp_login.html',
-      controller: "loginCtrl"
+      controller: "loginController"
+    }
+  )
+
+  .state('cadastro',
+    {
+      url:'/cadastro',
+      templateUrl: 'templates/temp_cadastro.html',
+      controller: "cadastroController"
     }
   )
 
