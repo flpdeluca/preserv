@@ -10,61 +10,44 @@
     
     <ion-content>
 	    
-	    <div class="list">
+	    <div class="list" ng-form name="cdstr">
 		  <label class="item item-input item-stacked-label">
-		    <span class="input-label">Nome</span>
-		    <input type="text" placeholder="Nome" ng-model="cadastro.nome">
+		    <span class="input-label {{vazio}}">Nome</span>
+		    <input type="text" placeholder="Nome" ng-model="cadastro.nome" required >
 		  </label>
 
 		  <label class="item item-input item-stacked-label">
 		    <span class="input-label">Sobrenome</span>
-		    <input type="text" placeholder="Sobrenome" ng-model="cadastro.sobrenome">
+		    <input type="text" placeholder="Sobrenome" ng-model="cadastro.sobrenome" required>
 		  </label>
 
-
-		  <li class="item item-toggle" ng-class="{'icon ion-man': liked, 'icon ion-woman': !liked}" ng-click="liked=!liked" >
-		     Sexo
-		     
-		     <!-- <i id="like" ng-class="{'icon ion-ios7-heart': some_model.liked, 'icon ion-ios7-heart-outline': !some_model.liked}" ng-click="some_model.liked=!some_model.liked"></i>-->
-
-		     <label class="toggle toggle-positive" >
-			       <input type="checkbox"> 
-			       <div class="track">
-			         <div class="handle">
-			         </div>
-			       </div>
-			 </label>
-	  	</li>
+	  	<ion-toggle ng-class="{'icon ion-man': homem, 'icon ion-woman': !homem}" ng-click="homem=!homem" ng-model="cadastro.sexo"></ion-toggle>
 
 	  	<label class="item item-input item-stacked-label">
 			<span class="input-label">Nascimento</span>
-			<input type="date" placeholder="nascimento">
+			<input type="date" placeholder="nascimento" ng-model="cadastro.nascimento" required>
 		</label>
 
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">e-mail</span>
-			<input type="email" placeholder="email">
+			<input type="email" placeholder="email" ng-model="cadastro.email" required>
 		</label>
 
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Senha</span>
-			<input type="password" placeholder="senha">
+			<input type="password" placeholder="senha" ng-model="cadastro.senha" required>
 		</label>
 
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Confirme a senha</span>
-			<input type="password" placeholder="Confirme a senha">
+			<input type="password" placeholder="Confirme a senha" ng-model="cadastro.confirmeSenha" required>
 		</label>
 
-		<button class="button button-block button-positive" ng-click="cadastroOk()">
+		<button class="button button-block button-positive" ng-click="cadastroOk()" ng-show="{{x=!cdstr.$valid}}">
 		  OK
 		</button>
 
-
-		</div>
-
-		
-
+		{{x=cdstr.$valid}}
     </ion-content>
 
   </ion-view>
