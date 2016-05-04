@@ -12,7 +12,7 @@
 	    
 	    <div class="list" ng-form name="cdstr">
 		  <label class="item item-input item-stacked-label">
-		    <span class="input-label {{vazio}}">Nome</span>
+		    <span class="input-label">Nome</span>
 		    <input type="text" placeholder="Nome" ng-model="cadastro.nome" required >
 		  </label>
 
@@ -43,11 +43,12 @@
 			<input type="password" placeholder="Confirme a senha" ng-model="cadastro.confirmeSenha" required>
 		</label>
 
-		<button class="button button-block button-positive" ng-click="cadastroOk()" ng-show="{{x=!cdstr.$valid}}">
+		<button class="button button-block button-positive" ng-click="cadastroOk()">
 		  OK
 		</button>
+		<!--ng-disabled="cdstr.$invalid"-->
 
-		{{x=cdstr.$valid}}
+		<!--{{x=cdstr.$valid}}-->
     </ion-content>
 
   </ion-view>

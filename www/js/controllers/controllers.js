@@ -8,48 +8,23 @@ app.controller('loginController',
         {
         	$location.path('/cadastro');
         }
-        
- 
        
     });
 
 
 app.controller('cadastroController',
-    function ($scope, $location, cadastroService) 
+    function ($scope, $location, usuarioService) 
     {
         var cadastro = $scope.cadastro ={};
 
         $scope.cadastroOk = function()
     	{
     		
-            //$scope.vazio ="assertive";
 
-            for (var i = cadastro.length - 1 ; i >= 0; i--) 
-            {
-                if (cadastro[i]== null) 
-                {
-                    
-                    //return null;
+            //cadastroService.inserirUsuario(cadastro);
 
-                    cadastro[i]. = 'assertive';
+            console.log(cadastroService.inserirUsuario(cadastro));
+     	}
 
-                }
-                 
-            }
-    	}
-
-        /*if (cadastroService.verificarNulos(cadastro)== null) 
-            {
-                console.log("Tinha campo nulo!");
-
-            }*/
-
-            //var a = cadastroService.verificarNulos(cadastro);
-
-            //console.log(a);
-
-
-
- 
        
-    });
+    })
