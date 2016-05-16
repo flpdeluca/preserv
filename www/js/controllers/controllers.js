@@ -19,11 +19,23 @@ app.controller('cadastroController',
 
         $scope.cadastroOk = function()
     	{
-    		
+    		usuarioService.getUsuario(1)
+            .then
+            (function (data) 
+            {
+                console.log(data);
+            }, function (error) 
+                {
+                    console.log(error);
+                }
+            )
 
-            //cadastroService.inserirUsuario(cadastro);
+            //usuarioService.setNome("Lhubinho");
 
-            console.log(cadastroService.inserirUsuario(cadastro));
+
+
+            //console.log(usuarioService.getUsuario("1"));
+
      	}
 
        

@@ -2,83 +2,75 @@ angular.module('starter.services', [])
 
 .service('usuarioService', function($http)
 	{
-		var servidor;
+		var _idUsuario;
+		var _nome;
+		var _sobrenome;
+		var _sexo;
+		var _nascimento;
+		var _email;
+		var _senha;
+		//var _publicacao = {};
 
-		this.inserirUsuario = function(cadst)
+
+		this.getidUsuario = function () 
 		{
-		
-			$http(
-			{	
-				method: 'POST',
-				url: servidor,
-				data: cadst
-			})
-			.then(function successCallback(response)
-			{
-				    return true;
-			}, 
-			function errorCallback(response)
-			{
-				    return false;.
-			});
+			return __idUsuario;
 		}
 
-		this.atualizarUsuario = function(cadst)
+		this.getNome = function () 
 		{
-		
-			$http(
-			{	
-				method: 'PUT',
-				url: servidor,
-				data: cadst
-			})
-			.then(function successCallback(response)
-			{
-				    return true;
-			}, 
-			function errorCallback(response)
-			{
-				    return false;.
-			});
-		}
-		
-		this.deletarUsuario = function(cadst)
-		{
-		
-			$http(
-			{	
-				method: 'DELETE',
-				url: servidor,
-				//data: cadst
-			})
-			.then(function successCallback(response)
-			{
-				    return true;
-			}, 
-			function errorCallback(response)
-			{
-				    return false;.
-			});
+			return _nome;
 		}
 
-		this.todosUsuarios = function()
+		this.setNome = function (nome) 
 		{
-		
-			$http(
-			{	
-				method: 'GET',
-				url: servidor,
-				//data: cadst
-			})
-			.then(function successCallback(response)
-			{
-				    return {response};
-			}, 
-			function errorCallback(response)
-			{
-				    return false;.
-			});
+			_nome = nome;
 		}
+		
+		this.getSobrenome = function () 
+		{
+			return _sobrenome;
+		}
+
+		this.setSobrenome = function (sobrenome) 
+		{
+			_sobrenome = sobrenome;
+		}
+
+		this.getNascimento = function () 
+		{
+			return _Nascimento;
+		}
+
+		this.setNascimento = function (nascimento) 
+		{
+			_nascimento = nascimento;
+		}
+
+
+		this.getTodos = function () 
+		{
+			return $http(
+					{
+						method: "GET",
+						url: "http://localhost/teste/efg.php",
+					})
+		}
+
+		this.getUsuario = function (id) 
+		{
+			return $http(
+					{
+						method: "GET",
+						url: "http://localhost/teste/efg.php/"+id,
+					})
+		}
+
+
 
 
 	});
+
+
+
+
