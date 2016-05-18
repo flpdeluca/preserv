@@ -59,10 +59,13 @@ angular.module('starter.services', [])
 
 		this.getUsuario = function (id) 
 		{
+			
+
 			return $http(
 					{
-						method: "GET",
-						url: "http://localhost/teste/efg.php/"+id,
+						method: "POST",
+						url: "http://localhost/teste/servPreserv.php/usuario/",
+						data: {objeto: id}
 					})
 		}
 

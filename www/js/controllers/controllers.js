@@ -15,11 +15,16 @@ app.controller('loginController',
 app.controller('cadastroController',
     function ($scope, $location, usuarioService) 
     {
-        var cadastro = $scope.cadastro ={};
+        //var cadastro = $scope.cadastro ={};
+        var usu =
+        {
+            id: 1,
+            nome: "Baboon"
+        };
 
         $scope.cadastroOk = function()
     	{
-    		usuarioService.getUsuario(1)
+    		usuarioService.getUsuario(usu)
             .then
             (function (data) 
             {
@@ -29,12 +34,6 @@ app.controller('cadastroController',
                     console.log(error);
                 }
             )
-
-            //usuarioService.setNome("Lhubinho");
-
-
-
-            //console.log(usuarioService.getUsuario("1"));
 
      	}
 
